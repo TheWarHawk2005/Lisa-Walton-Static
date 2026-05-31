@@ -11,6 +11,7 @@
 	--font-regular: 'Georgia';
 
 	--border-space: .5rem;
+	--page-width: 65lvw;
 }
 
 @font-face {
@@ -98,7 +99,7 @@ main {
 #profile-content,
 #pricing-content,
 #contact-content {
-	width: 65vw;
+	width: var(--page-width);
 	margin: auto auto;
 }
 
@@ -126,11 +127,6 @@ main {
 	display: grid;
 	grid-template-columns: 1fr 2fr;
 	gap: 2rem;
-}
-
-#profile-left,
-#profile-right {
-	min-width: 15rem;
 }
 
 #profile-left img {
@@ -225,4 +221,43 @@ footer {
 	padding: 1rem;
 	font-size: 1rem;
 	color: var(--color-02);
+}
+
+/* -------------------------- RESPONSIVE FORMATTING ------------------------- */
+
+/* Tablet */
+@media (max-width: 1300px) {
+	:root {
+		--page-width: 80lvw;
+	}
+}
+
+/* Smartphone */
+@media (max-width: 650px) {
+	:root {
+		--page-width: 85lvw;
+	}
+
+	nav {
+		padding: .2rem .4rem;
+	}
+#nav-content {
+	margin: 0 0;
+}
+	#navbar-name {
+		font-size: .85rem;
+		font-family: var(--font-title);
+		margin-bottom: auto;
+	}
+
+	#navbar-email {
+		font-size: .7rem;
+		font-weight: normal;
+	}
+
+	#profile-body {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+		gap: 2rem;
+	}
 }
