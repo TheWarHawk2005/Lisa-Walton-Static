@@ -1,0 +1,89 @@
+{
+		"@context": "https://schema.org",
+		"@graph": [
+			{
+				"@type": "PhysicalTherapist",
+				"@id": "https://altitude-pt-wellness.com/#business",
+				"name": "Altitude Physical Therapy and Wellness",
+				"legalName": "Altitude Physical Therapy and Wellness P.L.L.C.",
+				"url": "https://altitude-pt-wellness.com/",
+				"email": "lisawalton@altitude-pt-wellness.com",
+				"address": {
+					"@type": "PostalAddress",
+					"addressLocality": "Grand Rapids",
+					"addressRegion": "MI",
+					"addressCountry": "US"
+				},
+				"employee": { "@id": "https://altitude-pt-wellness.com/#lisa-walton" },
+				"hasOfferCatalog": {
+					"@type": "OfferCatalog",
+					"name": "Physical Therapy Services",
+					"itemListElement": [
+						{
+							"@type": "Offer",
+							"name": "15min Pain Assessment",
+							"price": "0",
+							"priceCurrency": "USD"
+						},
+						{
+							"@type": "Offer",
+							"name": "60min Comprehensive PT Evaluation",
+							"description": "Comprehensive assessment, movement screen, hands-on treatment, and a plan of care progression.",
+							"price": "150",
+							"priceCurrency": "USD"
+						},
+						{
+							"@type": "Offer",
+							"name": "40min Follow-up Treatment Session",
+							"description": "Hands-on manual therapy, corrective exercises, and a plan of care progression.",
+							"price": "125",
+							"priceCurrency": "USD"
+						},
+						{
+							"@type": "Offer",
+							"name": "PT Treatment Package (5 Sessions)",
+							"price": "575",
+							"priceCurrency": "USD"
+						},
+						{
+							"@type": "Offer",
+							"name": "PT Treatment Package (10 Sessions)",
+							"price": "1150",
+							"priceCurrency": "USD"
+						}
+					]
+				}
+			},
+			{
+				"@type": "Person",
+				"@id": "https://altitude-pt-wellness.com/#lisa-walton",
+				"name": "Lisa Walton",
+				"jobTitle": "Doctor of Physical Therapy",
+				"honorificSuffix": "PT, DPT",
+				"hasCredential": [
+					{
+						"@type": "EducationalOccupationalCredential",
+						"credentialCategory": "degree",
+						"name": "Doctor of Physical Therapy",
+						"educationalLevel": "Doctorate",
+						"recognizedBy": { "@type": "CollegeOrUniversity", "name": "University of Michigan-Flint" }
+					},
+					{
+						"@type": "EducationalOccupationalCredential",
+						"credentialCategory": "degree",
+						"name": "Bachelor of Science in Health Science",
+						"recognizedBy": { "@type": "CollegeOrUniversity", "name": "Grand Valley State University" }
+					},
+					{
+						"@type": "EducationalOccupationalCredential",
+						"name": "Certified Functional Nutrition Informed Professional (CFNIP)"
+					}
+				],
+				"worksFor": { "@id": "https://altitude-pt-wellness.com/#business" },
+				"alumniOf": [
+					{ "@type": "CollegeOrUniversity", "name": "Grand Valley State University" },
+					{ "@type": "CollegeOrUniversity", "name": "University of Michigan-Flint" }
+				]
+			}
+		]
+	}
