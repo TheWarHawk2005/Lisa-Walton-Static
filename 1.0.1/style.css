@@ -1,0 +1,320 @@
+:root {
+	--color-00: #ffffff;
+	--color-01: #dcdcdc;
+	--color-02: #b3b3b3;
+	--color-10: #1d1e4f;
+	--color-11: #464656;
+	--color-12: #212122;
+	--color-20: #83aa83;
+	--color-21: #1858b8;
+
+	--font-title: 'Old Standard';
+	--font-header: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	--font-regular: 'Georgia';
+
+	--border-space: .5rem;
+	--page-width: 65lvw;
+}
+
+@font-face {
+	font-family: 'Old Standard';
+	src: url(../assets/fonts/Old_Standard_TT/OldStandardTT-Regular.ttf);
+}
+
+* {
+	margin: 0px;
+	box-sizing: border-box;
+}
+
+html {
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+	margin-right: calc(-1 * (100vw - 100%));
+	font-family: var(--font-regular);
+}
+
+::selection {
+	background-color: var(--color-20);
+	color: var(--color-00);
+}
+
+body {
+	width: 100vw;
+	margin-right: calc(100vw - 100%);
+	background-color: var(--color-30);
+	font-family: var(--font-regular);
+	font-size: 1.1rem;
+}
+
+a,
+a:after {
+	color: var(--color-21);
+}
+
+h1,
+h2,
+h3 {
+	font-family: var(--font-header);
+}
+
+
+.title {
+	font-family: var(--font-title);
+	font-size: 5rem;
+	font-weight: normal;
+	margin-bottom: -1rem;
+	color: var(--color-12);
+}
+
+.subtitle {
+	font-family: var(--font-header);
+	font-weight: bold;
+	font-size: 1rem;
+	color: var(--color-10);
+}
+
+nav {
+	max-height: 5rem;
+	position: sticky;
+	height: fit-content;
+	padding: .75rem;
+	display: flex;
+
+	background-color: var(--color-10);
+	color: var(--color-00);
+	top: 0px;
+	box-shadow: 0px 0px 5px 0px #000000;
+}
+
+#nav-content {
+	font-family: var(--font-header);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#nav-left {
+	width: fit-content;
+	float: left;
+}
+
+#navbar-name {
+	font-size: 1.5rem;
+	font-family: var(--font-title);
+	margin-bottom: -.5rem;
+}
+
+#navbar-email {
+	font-size: 1rem;
+	font-weight: bold;
+}
+
+#navbar-right {
+	display: flex;
+	justify-content: flex-end;
+	flex: 1;
+}
+
+#navbar-contact-cta {
+	height: 2.5rem;
+	width: 8rem;
+	font-family: var(--font-header);
+	font-weight: bold;
+	font-size: 1rem;
+	color: var(--color-10);
+	border-radius: 2.5rem;
+	background-color: var(--color-00);
+	border: none;
+	cursor: pointer;
+
+	transition:
+		background .3s ease,
+		border .5s ease,
+		color .3s ease
+}
+
+#navbar-contact-cta:hover {
+	background-color: transparent;
+	border: 2px dashed var(--color-02);
+	color: var(--color-00)
+}
+
+
+main {
+	width: 100vw;
+	min-height: 50lvh;
+	background-image: url(../assets/img/svg/gdj-tree-5965316.svg);
+	background-position: 105% 105%;
+	background-repeat: no-repeat;
+	background-size: 30%;
+}
+
+#nav-content,
+#profile-content,
+#pricing-content,
+#contact-content {
+	width: var(--page-width);
+	margin: auto auto;
+}
+
+#hero {
+	border-radius: 0% 0% 0% 25rem/9.5rem;
+	border-bottom: 2px dashed var(--color-02);
+	padding-bottom: var(--border-space);
+}
+
+#hero-content {
+	width: 103%;
+	height: 25rem;
+	background-image: url(../assets/img/png/altitude_logo.png);
+	background-size: cover;
+	background-position: 50% 48.5%;
+	border-radius: 0% 0% 0% 25rem/10rem;
+	box-shadow: inset 0px 0px 5px 0px #000000;
+}
+
+#profile {
+	margin-top: 4rem;
+}
+
+#profile-body {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	gap: 2rem;
+}
+
+#profile-left img {
+	object-position: 50% 25%;
+	object-fit: cover;
+	width: 100%;
+	padding: var(--border-space);
+	border: 2px var(--color-02);
+	border-style: dashed;
+
+	border-radius: 100%;
+	aspect-ratio: 1/1;
+	align-self: center;
+}
+
+#profile-header {
+	text-align: center;
+	margin-bottom: 1.5rem;
+
+	span {
+		display: block;
+	}
+}
+
+#profile-right span {
+	display: block;
+}
+
+#profile-blurb p {
+	text-align: justify;
+	margin-bottom: .8rem;
+}
+
+#pricing,
+#contact {
+	margin-top: 8rem;
+}
+
+#pricing-header,
+#contact-header {
+	text-align: center;
+	margin-bottom: 1.5rem;
+}
+
+#pricing-title,
+#contact-title {
+	font-size: 3rem;
+	font-weight: 700;
+}
+
+#pricing-details {
+	padding: var(--border-space);
+	border: 2px var(--color-02);
+	border-style: dashed;
+}
+
+table {
+	font-size: 1rem;
+}
+
+thead {
+	background-color: #1d1e4f;
+	color: var(--color-00);
+	font-family: var(--font-header);
+}
+
+tbody {
+	background-color: var(--color-01);
+	font-size: .95rem;
+}
+
+th,
+td {
+	padding: .5rem;
+}
+
+tbody tr:nth-child(odd) {
+	background-color: var(--color-02);
+}
+
+tbody td:nth-child(2) {
+	font-weight: bold;
+}
+
+#contact {
+	text-align: center;
+	padding-bottom: 8rem;
+}
+
+footer {
+	background-color: var(--color-11);
+	box-shadow: 0px 0px 5px 0px #000000;
+	padding: 1rem;
+	font-size: 1rem;
+	color: var(--color-02);
+}
+
+/* -------------------------- RESPONSIVE FORMATTING ------------------------- */
+
+/* Tablet */
+@media (max-width: 1300px) {
+	:root {
+		--page-width: 80lvw;
+	}
+}
+
+/* Smartphone */
+@media (max-width: 650px) {
+	:root {
+		--page-width: 85lvw;
+	}
+
+	nav {
+		padding: .2rem .4rem;
+	}
+
+	#nav-content {
+		margin: 0 0;
+	}
+
+	#navbar-name {
+		font-size: .85rem;
+		font-family: var(--font-title);
+		margin-bottom: auto;
+	}
+
+	#navbar-email {
+		font-size: .7rem;
+		font-weight: normal;
+	}
+
+	#profile-body {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+		gap: 2rem;
+	}
+}
