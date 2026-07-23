@@ -1,5 +1,4 @@
 console.log('Website programmed by Lou Harrison.')
-console.log('Updated 7/18/2026')
 scrollToHeader()
 
 

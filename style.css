@@ -55,12 +55,15 @@ h1,
 h2,
 h3 {
 	font-family: var(--font-header);
+	font-size: 1.1rem;
+	font-weight: normal;
 }
 
 
 .title {
 	font-family: var(--font-title);
 	font-size: 5rem;
+	font-weight: normal;
 	margin-bottom: -1rem;
 	color: var(--color-12);
 }
